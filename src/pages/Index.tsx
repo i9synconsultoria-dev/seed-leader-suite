@@ -85,28 +85,7 @@ const Index = () => {
     rota: "/dashboard"
   }];
   console.log("About to render Index component");
-  return <div className="min-h-screen bg-background pb-24">
-      {/* Header */}
-      <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-6">
-          <div className="flex items-center space-x-2">
-            <h1 className="text-2xl font-bold text-foreground tracking-wider">TEAM SEEDS</h1>
-            <div className="flex space-x-1">
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
-              <div className="w-2 h-2 bg-primary/70 rounded-full"></div>
-              <div className="w-2 h-2 bg-primary/50 rounded-full"></div>
-            </div>
-          </div>
-          
-          <button 
-            onClick={() => navigate("/login")}
-            className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary-hover transition-colors"
-          >
-            <User className="h-5 w-5" />
-          </button>
-        </div>
-      </header>
-
+  return <div className="min-h-screen bg-background pb-24 pt-16">
 
       {/* Menu de Funcionalidades */}
       <section className="py-12">

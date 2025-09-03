@@ -43,40 +43,23 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-card border-b border-border">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => navigate('/cadastros')}
-                className="text-muted-foreground hover:text-primary"
-              >
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Cadastros
-              </Button>
-              <div className="flex items-center space-x-2">
-                <Heart className="h-6 w-6 text-primary" />
-                <span className="text-xl font-semibold">Dashboard - Igreja Local</span>
-              </div>
-            </div>
-            <Button 
-              onClick={() => navigate('/')}
-              variant="outline"
-            >
-              Página Inicial
-            </Button>
-          </div>
-        </div>
-      </header>
-
+    <div className="min-h-screen bg-background pt-16">
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
+        <div className="mb-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate('/cadastros')}
+            className="text-muted-foreground hover:text-primary"
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Cadastros
+          </Button>
+        </div>
+        
         <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Dashboard Analítico</h1>
+          <h1 className="text-3xl font-bold mb-2">Dashboard - Igreja Local</h1>
           <p className="text-muted-foreground">
             Visualize as métricas e dados da sua igreja local
           </p>

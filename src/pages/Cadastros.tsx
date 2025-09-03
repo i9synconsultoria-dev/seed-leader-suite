@@ -13,38 +13,21 @@ const Cadastros = () => {
   const [activeTab, setActiveTab] = useState('seeds');
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-card border-b border-border">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => navigate('/')}
-                className="text-muted-foreground hover:text-primary"
-              >
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Voltar
-              </Button>
-              <div className="flex items-center space-x-2">
-                <Heart className="h-6 w-6 text-primary" />
-                <span className="text-xl font-semibold">Igreja Local</span>
-              </div>
-            </div>
-            <Button 
-              onClick={() => navigate('/dashboard')}
-              className="bg-gradient-primary hover:opacity-90 transition-opacity"
-            >
-              Ver Dashboard
-            </Button>
-          </div>
-        </div>
-      </header>
-
+    <div className="min-h-screen bg-background pt-16">
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
+        <div className="mb-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate('/')}
+            className="text-muted-foreground hover:text-primary"
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Voltar
+          </Button>
+        </div>
+        
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Sistema de Cadastros</h1>
           <p className="text-muted-foreground">

@@ -132,7 +132,13 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {menuFuncionalidades.map(item => <Card key={item.titulo} className="bg-gradient-card shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer" onClick={() => navigate(item.rota)}>
-                
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3">
+                    <item.icon className="h-6 w-6 text-primary" />
+                    {item.titulo}
+                  </CardTitle>
+                  <CardDescription>{item.descricao}</CardDescription>
+                </CardHeader>
               </Card>)}
           </div>
         </div>

@@ -26,7 +26,9 @@ import {
 } from "@/components/ui/carousel";
 
 const Index = () => {
+  console.log("Index component is loading");
   const navigate = useNavigate();
+  console.log("Navigate function initialized");
 
   // Dados mockados do dashboard
   const stats = {
@@ -81,6 +83,7 @@ const Index = () => {
     },
   ];
 
+  console.log("About to render Index component");
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}

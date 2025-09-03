@@ -20,7 +20,7 @@ const Login = () => {
     <div className="min-h-screen bg-background flex flex-col items-center justify-center px-6">
       {/* Logo */}
       <div className="mb-16">
-        <h1 className="text-4xl font-bold text-foreground tracking-wider">MANANCIAIS</h1>
+        <h1 className="text-4xl font-bold text-foreground tracking-wider">TEAM SEEDS</h1>
         <div className="flex space-x-1 mt-2">
           <div className="w-8 h-1 bg-primary rounded"></div>
           <div className="w-6 h-1 bg-primary/70 rounded"></div>

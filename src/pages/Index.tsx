@@ -90,7 +90,7 @@ const Index = () => {
       <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-6">
           <div className="flex items-center space-x-2">
-            <h1 className="text-2xl font-bold text-foreground tracking-wider">MANANCIAIS</h1>
+            <h1 className="text-2xl font-bold text-foreground tracking-wider">TEAM SEEDS</h1>
             <div className="flex space-x-1">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
               <div className="w-2 h-2 bg-primary/70 rounded-full"></div>

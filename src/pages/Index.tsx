@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Calendar, BarChart3, UserCheck, Heart, TrendingUp, Crown, Clock, Plus, Settings, FileText, ChevronRight } from "lucide-react";
+import { Users, Calendar, BarChart3, UserCheck, Heart, TrendingUp, Crown, Clock, Plus, Settings, FileText, ChevronRight, User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import FloatingBottomMenu from "@/components/FloatingBottomMenu";
 const Index = () => {
   console.log("Index component is loading");
   const navigate = useNavigate();
@@ -84,29 +85,27 @@ const Index = () => {
     rota: "/dashboard"
   }];
   console.log("About to render Index component");
-  return <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-card/95">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+  return <div className="min-h-screen bg-background pb-24">
+      {/* Header */}
+      <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-6">
           <div className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Igreja Local
-            </span>
+            <h1 className="text-2xl font-bold text-foreground tracking-wider">MANANCIAIS</h1>
+            <div className="flex space-x-1">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <div className="w-2 h-2 bg-primary/70 rounded-full"></div>
+              <div className="w-2 h-2 bg-primary/50 rounded-full"></div>
+            </div>
           </div>
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" onClick={() => navigate('/dashboard')} className="text-muted-foreground hover:text-primary">
-              Dashboard
-            </Button>
-            <Button variant="ghost" onClick={() => navigate('/cadastros')} className="text-muted-foreground hover:text-primary">
-              Cadastros
-            </Button>
-            <Button variant="ghost" size="icon">
-              <Settings className="h-4 w-4" />
-            </Button>
-          </div>
+          
+          <button 
+            onClick={() => navigate("/login")}
+            className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary-hover transition-colors"
+          >
+            <User className="h-5 w-5" />
+          </button>
         </div>
-      </nav>
+      </header>
 
 
       {/* Menu de Funcionalidades */}
@@ -288,6 +287,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Floating Bottom Menu */}
+      <FloatingBottomMenu />
     </div>;
 };
 export default Index;

@@ -9,31 +9,31 @@ Paleta inspirada em espiritualidade, confiança e modernidade
 @layer base {
   :root {
     /* Core colors - Igreja Local theme */
-    --background: 220 15% 97%;
-    --foreground: 215 25% 15%;
+    --background: 0 0% 96%;
+    --foreground: 60 5% 3%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card: 0 0% 98%;
+    --card-foreground: 60 5% 3%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 60 5% 3%;
 
-    /* Primary - Deep spiritual blue */
-    --primary: 215 85% 35%;
+    /* Primary - Vibrant orange */
+    --primary: 25 100% 52%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 215 85% 30%;
+    --primary-hover: 25 100% 47%;
 
-    /* Secondary - Soft gray-blue */
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 215 25% 25%;
+    /* Secondary - Soft gray */
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 60 5% 15%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 215 20% 45%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Accent - Golden warmth */
-    --accent: 45 95% 55%;
-    --accent-foreground: 215 25% 15%;
-    --accent-hover: 45 95% 50%;
+    /* Accent - Darker orange variant */
+    --accent: 25 100% 47%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 25 100% 42%;
 
     /* Success - Nature green */
     --success: 145 65% 45%;
@@ -42,22 +42,22 @@ Paleta inspirada em espiritualidade, confiança e modernidade
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 215 85% 35%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 25 100% 52%;
 
     --radius: 0.75rem;
 
     /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 85% 35%), hsl(215 85% 45%));
-    --gradient-accent: linear-gradient(135deg, hsl(45 95% 55%), hsl(45 95% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(215 85% 35%) 0%, hsl(215 85% 45%) 50%, hsl(45 95% 55%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 15% 98%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(25 100% 52%), hsl(25 100% 57%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 100% 47%), hsl(25 100% 52%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 100% 52%) 0%, hsl(25 100% 57%) 50%, hsl(25 85% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 98%) 0%, hsl(0 0% 96%) 100%);
 
     /* Shadows */
-    --shadow-card: 0 4px 20px hsl(215 85% 35% / 0.08);
-    --shadow-elevated: 0 8px 40px hsl(215 85% 35% / 0.12);
-    --shadow-glow: 0 0 30px hsl(45 95% 55% / 0.3);
+    --shadow-card: 0 4px 20px hsl(25 100% 52% / 0.08);
+    --shadow-elevated: 0 8px 40px hsl(25 100% 52% / 0.12);
+    --shadow-glow: 0 0 30px hsl(25 100% 52% / 0.3);
 
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -66,45 +66,38 @@ Paleta inspirada em espiritualidade, confiança e modernidade
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-foreground: 60 5% 15%;
+    --sidebar-primary: 25 100% 52%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 60 5% 15%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 25 100% 52%;
   }
 
   .dark {
-    --background: 215 25% 8%;
-    --foreground: 220 15% 95%;
+    --background: 60 5% 3%;
+    --foreground: 0 0% 95%;
 
-    --card: 215 25% 10%;
-    --card-foreground: 220 15% 95%;
+    --card: 60 5% 5%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 215 25% 10%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 60 5% 5%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 215 85% 45%;
+    --primary: 25 100% 52%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 215 85% 40%;
+    --primary-hover: 25 100% 47%;
 
-    --secondary: 215 25% 15%;
-    --secondary-foreground: 220 15% 85%;
+    --secondary: 60 5% 10%;
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 215 25% 15%;
-    --muted-foreground: 220 15% 60%;
+    --muted: 60 5% 10%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 45 95% 60%;
-    --accent-foreground: 215 25% 8%;
-    --accent-hover: 45 95% 55%;
+    --accent: 25 100% 57%;
+    --accent-foreground: 60 5% 3%;
+    --accent-hover: 25 100% 52%;
 
     --success: 145 65% 50%;
     --success-foreground: 0 0% 98%;
@@ -112,20 +105,20 @@ Paleta inspirada em espiritualidade, confiança e modernidade
     --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 25% 20%;
-    --input: 215 25% 20%;
-    --ring: 215 85% 45%;
+    --border: 60 5% 15%;
+    --input: 60 5% 15%;
+    --ring: 25 100% 52%;
 
     /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 85% 45%), hsl(215 85% 55%));
-    --gradient-accent: linear-gradient(135deg, hsl(45 95% 60%), hsl(45 95% 70%));
-    --gradient-hero: linear-gradient(135deg, hsl(215 85% 45%) 0%, hsl(215 85% 55%) 50%, hsl(45 95% 60%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(215 25% 10%) 0%, hsl(215 25% 12%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(25 100% 52%), hsl(25 100% 57%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 100% 57%), hsl(25 100% 62%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 100% 52%) 0%, hsl(25 100% 57%) 50%, hsl(25 85% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(60 5% 5%) 0%, hsl(60 5% 7%) 100%);
 
     /* Dark shadows */
-    --shadow-card: 0 4px 20px hsl(215 25% 5% / 0.3);
-    --shadow-elevated: 0 8px 40px hsl(215 25% 5% / 0.5);
-    --shadow-glow: 0 0 30px hsl(45 95% 60% / 0.4);
+    --shadow-card: 0 4px 20px hsl(60 5% 2% / 0.5);
+    --shadow-elevated: 0 8px 40px hsl(60 5% 2% / 0.7);
+    --shadow-glow: 0 0 30px hsl(25 100% 52% / 0.4);
   }
 }
 

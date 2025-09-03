@@ -108,18 +108,6 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Welcome Section */}
-      <section className="py-12 bg-gradient-hero/10">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold mb-4">
-              Bem-vindo ao Sistema 
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> Local</span>
-            </h1>
-            
-          </div>
-        </div>
-      </section>
 
       {/* Menu de Funcionalidades */}
       <section className="py-12">

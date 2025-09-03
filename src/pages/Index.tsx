@@ -132,8 +132,34 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Dashboard Preview Carousel */}
+      {/* Menu de Funcionalidades */}
       <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold mb-2">Funcionalidades do Sistema</h2>
+            <p className="text-muted-foreground">Acesse rapidamente as principais áreas do sistema</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {menuFuncionalidades.map((item) => (
+              <Card 
+                key={item.titulo}
+                className="bg-gradient-card shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer"
+                onClick={() => navigate(item.rota)}
+              >
+                <CardHeader className="text-center">
+                  <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <CardTitle className="text-xl">{item.titulo}</CardTitle>
+                  <CardDescription>{item.descricao}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dashboard Preview Carousel */}
+      <section className="py-12 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-2">Visão Geral dos Painéis</h2>
@@ -209,7 +235,7 @@ const Index = () => {
       </section>
 
       {/* Grid de Seções */}
-      <section className="py-12 bg-secondary/30">
+      <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Próximos Eventos */}
@@ -303,32 +329,6 @@ const Index = () => {
                 </Button>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Menu de Funcionalidades */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold mb-2">Funcionalidades do Sistema</h2>
-            <p className="text-muted-foreground">Acesse rapidamente as principais áreas do sistema</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {menuFuncionalidades.map((item) => (
-              <Card 
-                key={item.titulo}
-                className="bg-gradient-card shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer"
-                onClick={() => navigate(item.rota)}
-              >
-                <CardHeader className="text-center">
-                  <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <CardTitle className="text-xl">{item.titulo}</CardTitle>
-                  <CardDescription>{item.descricao}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

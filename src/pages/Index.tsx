@@ -136,7 +136,7 @@ const Index = () => {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="mb-8">
-            <h2 className="text-3xl font-bold mb-2">Funcionalidades do Sistema</h2>
+            <h2 className="text-3xl font-bold mb-2">Menu Principal</h2>
             <p className="text-muted-foreground">Acesse rapidamente as principais áreas do sistema</p>
           </div>
           

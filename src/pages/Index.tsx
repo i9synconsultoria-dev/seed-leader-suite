@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Users, Calendar, BarChart3, UserCheck, Heart, TrendingUp, Crown, Clock, Plus, Settings, FileText, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 const Index = () => {
   console.log("Index component is loading");
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ const Index = () => {
     eventosEstesMes: 12,
     frequenciaMedia: 78
   };
+
   const proximosEventos = [{
     id: 1,
     nome: "Culto de Domingo",
@@ -36,6 +38,7 @@ const Index = () => {
     horario: "20:00",
     local: "Sala 2"
   }];
+
   const novosMembros = [{
     nome: "Carlos Eduardo",
     tipo: "Seed",
@@ -49,6 +52,7 @@ const Index = () => {
     tipo: "Líder",
     dataIngresso: "2024-01-05"
   }];
+
   const destaques = [{
     titulo: "Melhor Frequência",
     descricao: "78% de presença este mês",
@@ -62,6 +66,7 @@ const Index = () => {
     descricao: "Retiro Espiritual - 20/01",
     tipo: "warning"
   }];
+
   const menuFuncionalidades = [{
     titulo: "Cadastros",
     descricao: "Gerenciar Seeds, Líderes e Eventos",
@@ -83,8 +88,11 @@ const Index = () => {
     icon: FileText,
     rota: "/dashboard"
   }];
+
   console.log("About to render Index component");
-  return <div className="min-h-screen bg-background">
+  
+  return (
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-card/95">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -112,11 +120,21 @@ const Index = () => {
       <section className="py-12 bg-gradient-hero/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
+            <p className="text-lg text-muted-foreground mb-2 capitalize">
+              {new Date().toLocaleDateString('pt-BR', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              })}
+            </p>
             <h1 className="text-4xl font-bold mb-4">
               Bem-vindo ao Sistema 
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> Local</span>
+              <span className="bg-gradient-primary bg-clip-text text-transparent">da Igreja Local</span>
             </h1>
-            
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Gerencie sua comunidade com facilidade e acompanhe o crescimento espiritual de todos os membros
+            </p>
           </div>
         </div>
       </section>
@@ -127,17 +145,24 @@ const Index = () => {
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-2">Menu Principal</h2>
             <p className="text-muted-foreground">
-          </p>
+              Escolha uma funcionalidade para gerenciar sua igreja
+            </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {menuFuncionalidades.map(item => <Card key={item.titulo} className="bg-gradient-card shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer" onClick={() => navigate(item.rota)}>
+            {menuFuncionalidades.map(item => (
+              <Card 
+                key={item.titulo} 
+                className="bg-gradient-card shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer" 
+                onClick={() => navigate(item.rota)}
+              >
                 <CardHeader className="text-center">
                   <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                   <CardTitle className="text-xl">{item.titulo}</CardTitle>
                   <CardDescription>{item.descricao}</CardDescription>
                 </CardHeader>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -232,7 +257,8 @@ const Index = () => {
                 <CardDescription>Eventos programados para os próximos dias</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                {proximosEventos.map(evento => <div key={evento.id} className="flex items-center justify-between p-3 bg-secondary/20 rounded-lg">
+                {proximosEventos.map(evento => (
+                  <div key={evento.id} className="flex items-center justify-between p-3 bg-secondary/20 rounded-lg">
                     <div className="space-y-1">
                       <p className="font-medium">{evento.nome}</p>
                       <p className="text-sm text-muted-foreground flex items-center gap-1">
@@ -241,7 +267,8 @@ const Index = () => {
                       </p>
                     </div>
                     <ChevronRight className="h-4 w-4 text-muted-foreground" />
-                  </div>)}
+                  </div>
+                ))}
                 <Button variant="outline" className="w-full mt-4" onClick={() => navigate('/dashboard')}>
                   Ver Todos os Eventos
                 </Button>
@@ -258,7 +285,8 @@ const Index = () => {
                 <CardDescription>Membros cadastrados recentemente</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                {novosMembros.map((membro, index) => <div key={index} className="flex items-center justify-between p-3 bg-secondary/20 rounded-lg">
+                {novosMembros.map((membro, index) => (
+                  <div key={index} className="flex items-center justify-between p-3 bg-secondary/20 rounded-lg">
                     <div className="space-y-1">
                       <p className="font-medium">{membro.nome}</p>
                       <p className="text-sm text-muted-foreground">
@@ -268,7 +296,8 @@ const Index = () => {
                     <Badge variant={membro.tipo === 'Líder' ? 'default' : 'secondary'}>
                       {membro.tipo}
                     </Badge>
-                  </div>)}
+                  </div>
+                ))}
                 <Button variant="outline" className="w-full mt-4" onClick={() => navigate('/cadastros')}>
                   <Plus className="h-4 w-4 mr-2" />
                   Cadastrar Novo Membro
@@ -286,10 +315,12 @@ const Index = () => {
                 <CardDescription>Informações importantes e conquistas</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                {destaques.map((destaque, index) => <div key={index} className="p-3 bg-secondary/20 rounded-lg">
+                {destaques.map((destaque, index) => (
+                  <div key={index} className="p-3 bg-secondary/20 rounded-lg">
                     <p className="font-medium mb-1">{destaque.titulo}</p>
                     <p className="text-sm text-muted-foreground">{destaque.descricao}</p>
-                  </div>)}
+                  </div>
+                ))}
                 <Button variant="outline" className="w-full mt-4" onClick={() => navigate('/dashboard')}>
                   Ver Dashboard Completo
                 </Button>
@@ -298,6 +329,8 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
